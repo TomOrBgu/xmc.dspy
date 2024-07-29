@@ -1,0 +1,23 @@
+{
+    "dataset_name": "biodex_reactions",
+    "program_name": "infer-retrieve-rank",
+    "infer_student_model_name": "mistralai/Mistral-7B-Instruct-v0.3",
+    "infer_teacher_model_name": "Qwen/Qwen2-72B-Instruct",
+    "rank_student_model_name": "Qwen/Qwen2-72B-Instruct",
+    "rank_teacher_model_name": "Qwen/Qwen2-72B-Instruct",
+    "infer_compile": true,
+    "infer_compile_metric_name": "rp10",
+    "rank_compile": true,
+    "rank_compile_metric_name": "rp10",
+    "optimizer_name": "left-to-right",
+    "validation_rp5": 32.97,
+    "validation_recall5": null,
+    "validation_rp10": 31.83,
+    "validation_rp50": 39.34,
+    "validation_recall10": null,
+    "test_rp5": 28.29,
+    "test_recall5": null,
+    "test_rp10": 30.92,
+    "test_rp50": null,
+    "test_recall10": null
+}

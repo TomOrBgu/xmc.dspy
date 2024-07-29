@@ -3,7 +3,6 @@
 __pycache__/
 data/esco/
 data/embeddings/
-results/
 *.log
 local_cache/
 local_cache 2/

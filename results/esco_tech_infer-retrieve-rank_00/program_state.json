@@ -1,0 +1,121 @@
+{
+    "infer_retrieve.infer.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "\u2022 Knowledge of industry wide technology strategies and best practices",
+                    "rationale": "produce the output. We need to identify the ESCO job skills mentioned in the given vacancy snippet. The snippet mentions \"knowledge of industry wide technology strategies and best practices\", which can be broken down into specific skills.",
+                    "output": "Technology strategy, Technical best practices, Industry-specific technology knowledge"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "model": "mistralai/Mistral-7B-Instruct-v0.3",
+            "url": "https://api.together.xyz/v1",
+            "temperature": 0.01,
+            "max_tokens": 512,
+            "top_p": 0.97,
+            "n": 1,
+            "stop": []
+        }
+    },
+    "rank.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "\u2022 Knowledge of industry wide technology strategies and best practices",
+                    "options": [
+                        "define technology strategy",
+                        "develop company strategies",
+                        "develop technological improvement strategies",
+                        "strategic planning",
+                        "business strategy concepts",
+                        "keep up to date on product knowledge",
+                        "carry out strategic research",
+                        "perform technical tasks with great care",
+                        "apply strategic thinking",
+                        "aviation standards and recommended practices",
+                        "liaise with industry experts",
+                        "consult technical resources",
+                        "use technical documentation",
+                        "implement strategic planning",
+                        "adapt to changes in technological development plans",
+                        "provide training on technological business developments",
+                        "information security strategy",
+                        "apply knowledge of science technology and engineering",
+                        "manage company transport strategy",
+                        "maintain technical equipment",
+                        "satisfy technical requirements",
+                        "implement strategic management",
+                        "develop media strategy",
+                        "solve technical problems",
+                        "gather technical information",
+                        "adhere to standard procedures",
+                        "good manufacturing practices",
+                        "provide technical documentation",
+                        "coordinate technological activities",
+                        "develop strategy to solve problems",
+                        "lead technology development of an organisation",
+                        "innovate in ICT",
+                        "develop information security strategy",
+                        "set safety and security standards",
+                        "make strategic business decisions",
+                        "manage business knowledge",
+                        "provide technical expertise",
+                        "business knowledge",
+                        "create technical plans",
+                        "identify technological needs",
+                        "monitor technology trends",
+                        "follow company standards",
+                        "plan marketing strategy",
+                        "follow industry codes of practice for aviation safety",
+                        "monitor developments in field of expertise",
+                        "write technical reports",
+                        "advise on safety measures",
+                        "develop procurement strategy",
+                        "advise on equipment maintenance",
+                        "develop working procedures"
+                    ],
+                    "rationale": "produce the output. We need to identify the skills that are directly related to the knowledge of industry-wide technology strategies and best practices. The skills that are most applicable to this requirement are those that involve strategic planning, knowledge of technology, and the ability to apply best practices in the industry. Here are the 10 most applicable skills:",
+                    "output": "define technology strategy, develop technological improvement strategies, strategic planning, business strategy concepts, keep up to date on product knowledge, carry out strategic research, apply strategic thinking, aviation standards and recommended practices, liaise with industry experts, consult technical resources"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "model": "Qwen/Qwen2-72B-Instruct",
+            "url": "https://api.together.xyz/v1",
+            "temperature": 0.0,
+            "max_tokens": 512,
+            "top_p": 1,
+            "n": 1,
+            "stop": [],
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "config": {
+        "infer_signature_name": "infer_esco",
+        "rank_signature_name": "rank_esco",
+        "prior_A": 0,
+        "prior_path": "./data/esco/esco_priors.json",
+        "rank_topk": 50,
+        "chunk_context_window": 3000,
+        "chunk_max_windows": 5,
+        "chunk_window_overlap": 0.02,
+        "rank_skip": false,
+        "ontology_path": "./data/esco/skills_en_label.txt",
+        "ontology_name": "esco",
+        "retriever_model_name": "sentence-transformers/all-mpnet-base-v2",
+        "optimizer_name": "left-to-right"
+    }
+}

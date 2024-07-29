@@ -1,0 +1,121 @@
+{
+    "infer_retrieve.infer.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "TITLE:\nCompartment and Crush Syndromes After Sleep Deprivation and a Therapeutic Dose of Zolpidem.\n\nABSTRACT:\nDespite extensive review in the literature, compartment syndrome and crush syndrome remain difficult to diagnose. Trauma, toxins and reperfusion have been associated with these syndromes. Cases involving alcohol and drug abuse have described patients \"found down\" compressing an extremity. We present a case of a registered nurse who developed compartment syndrome in multiple limbs due to prolonged sleep after sleep deprivation and zolpidem use. To our knowledge, this is the first case of compartment syndrome or crush syndrome to have occurred in the setting of zolpidem use. Sleep disruption in healthcare workers represents a public health issue with dangerous sequelae, both acute and chronic.\n\nTEXT:\nINTRODUCTION\nA shift worker is defined as \u201canyone who works extended-duration shifts and other variable and nonstandard hours \u2026 late into the night or very early in the morning.\u201d1 Nurses and hospital staff implemented shift-based scheduling long ago. Emergency physicians (EP) adopted the practice early in the evolution of the specialty. Hospitals are non-stop businesses with high rates of error occurring at very high stakes. Hospital staff and physicians who work night shifts and swing shifts are subjected to circadian disruption that leads to fatigue, poor performance, and patient harm. Many shift workers find themselves unable to obtain satisfactory quality or quantity of sleep due to rotating schedules. Sleep deprivation has been shown to impair vigilance, cognition, memory and fine motor skills.2 Night shift work and subsequent circadian disturbance have independent deleterious effects on these parameters.2 Cognitive performance decline from sleep deprivation appears similar to alcohol intoxication, with 17 hours of wakefulness correlating to a blood alcohol concentration of 0.05% and 24 hours to 0.10%.3\n\nCompartment syndrome refers to the pressure increase in a closed fascial space to the point of reduced capillary perfusion.4 Usually due to long bone fracture, these pressure increases can ensue when a limb is crushed by a person\u2019s own bodyweight. With severe or prolonged crushing force, muscle necrosis occurs with subsequent life-threatening systemic effects: rhabdomyolysis, renal failure, hyperkalemia, and death. We present the case of a registered nurse who used pharmaceuticals to \u201ccatch up\u201d on sleep, waking up 30 hours later with crush and compartment syndromes in multiple limbs.\n\nCASE REPORT\nAn African-American female in her early thirties with normal body mass index and no past medical history sought rest after 30 hours without sleep. The patient took 50 milligrams (mg) of diphenhydramine and five mg of immediate-release zolpidem. She awoke unable to move her right upper and lower extremities and had severe pain in the right side of her body. The patient contacted staff in her emergency department (ED) and was encouraged to call emergency medical services for transport to the hospital.",
+                    "rationale": "Reasoning: Let's think step by step in order to identify the adverse drug reactions affecting the patient. We need to look for any side effects or complications that arose from the use of zolpidem, diphenhydramine, and sleep deprivation. In this case, the article mentions that the patient developed compartment syndrome and crush syndrome after using zolpidem and diphenhydramine to catch up on sleep. Compartment syndrome and crush syndrome are known side effects or complications associated with the use of zolpidem, especially when combined with sleep deprivation.",
+                    "output": "compartment syndrome, crush syndrome, severe pain, muscle necrosis, rhabdomyolysis, renal failure, hyperkalemia"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "model": "mistralai/Mistral-7B-Instruct-v0.3",
+            "url": "https://api.together.xyz/v1",
+            "temperature": 0.01,
+            "max_tokens": 512,
+            "top_p": 0.97,
+            "n": 1,
+            "stop": []
+        }
+    },
+    "rank.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "TITLE:\nCompartment and Crush Syndromes After Sleep Deprivation and a Therapeutic Dose of Zolpidem.\n\nABSTRACT:\nDespite extensive review in the literature, compartment syndrome and crush syndrome remain difficult to diagnose. Trauma, toxins and reperfusion have been associated with these syndromes. Cases involving alcohol and drug abuse have described patients \"found down\" compressing an extremity. We present a case of a registered nurse who developed compartment syndrome in multiple limbs due to prolonged sleep after sleep deprivation and zolpidem use. To our knowledge, this is the first case of compartment syndrome or crush syndrome to have occurred in the setting of zolpidem use. Sleep disruption in healthcare workers represents a public health issue with dangerous sequelae, both acute and chronic.\n\nTEXT:\nINTRODUCTION\nA shift worker is defined as \u201canyone who works extended-duration shifts and other variable and nonstandard hours \u2026 late into the night or very early in the morning.\u201d1 Nurses and hospital staff implemented shift-based scheduling long ago. Emergency physicians (EP) adopted the practice early in the evolution of the specialty. Hospitals are non-stop businesses with high rates of error occurring at very high stakes. Hospital staff and physicians who work night shifts and swing shifts are subjected to circadian disruption that leads to fatigue, poor performance, and patient harm. Many shift workers find themselves unable to obtain satisfactory quality or quantity of sleep due to rotating schedules. Sleep deprivation has been shown to impair vigilance, cognition, memory and fine motor skills.2 Night shift work and subsequent circadian disturbance have independent deleterious effects on these parameters.2 Cognitive performance decline from sleep deprivation appears similar to alcohol intoxication, with 17 hours of wakefulness correlating to a blood alcohol concentration of 0.05% and 24 hours to 0.10%.3\n\nCompartment syndrome refers to the pressure increase in a closed fascial space to the point of reduced capillary perfusion.4 Usually due to long bone fracture, these pressure increases can ensue when a limb is crushed by a person\u2019s own bodyweight. With severe or prolonged crushing force, muscle necrosis occurs with subsequent life-threatening systemic effects: rhabdomyolysis, renal failure, hyperkalemia, and death. We present the case of a registered nurse who used pharmaceuticals to \u201ccatch up\u201d on sleep, waking up 30 hours later with crush and compartment syndromes in multiple limbs.\n\nCASE REPORT\nAn African-American female in her early thirties with normal body mass index and no past medical history sought rest after 30 hours without sleep. The patient took 50 milligrams (mg) of diphenhydramine and five mg of immediate-release zolpidem. She awoke unable to move her right upper and lower extremities and had severe pain in the right side of her body. The patient contacted staff in her emergency department (ED) and was encouraged to call emergency medical services for transport to the hospital.",
+                    "options": [
+                        "Acute kidney injury",
+                        "Renal impairment",
+                        "Renal failure",
+                        "Rhabdomyolysis",
+                        "Hyperkalaemia",
+                        "Pain",
+                        "Headache",
+                        "Compartment syndrome",
+                        "Muscle necrosis",
+                        "Metabolic acidosis",
+                        "Hypokalaemia",
+                        "Anuria",
+                        "Multiple organ dysfunction syndrome",
+                        "Crush syndrome",
+                        "Respiratory failure",
+                        "Oliguria",
+                        "Blood potassium increased",
+                        "Necrotising myositis",
+                        "Metabolic alkalosis",
+                        "Prerenal failure",
+                        "Urine potassium increased",
+                        "Alkalosis",
+                        "Postrenal failure",
+                        "Hypercalcaemia",
+                        "Nausea",
+                        "Abdominal pain",
+                        "Tendon necrosis",
+                        "Blood creatinine increased",
+                        "Blood potassium decreased",
+                        "Necrosis",
+                        "Azotaemia",
+                        "Hepatorenal failure",
+                        "Abdominal compartment syndrome",
+                        "Soft tissue necrosis",
+                        "Blood potassium abnormal",
+                        "Hypocalcaemia",
+                        "Hyperkaliuria",
+                        "Alkalosis hypochloraemic",
+                        "Acidosis",
+                        "Urine potassium abnormal",
+                        "Ultrafiltration failure",
+                        "Subacute kidney injury",
+                        "Alkalosis hypokalaemic",
+                        "Crush injury",
+                        "Hypokalaemic syndrome",
+                        "Hepatic failure",
+                        "Diabetic ketoacidosis",
+                        "Blood potassium",
+                        "End stage renal disease",
+                        "Hepatorenal syndrome"
+                    ],
+                    "rationale": "produce the output. We need to identify the adverse reactions that are directly mentioned or implied in the article snippet. The article discusses a case where a patient developed compartment syndrome and crush syndrome after prolonged sleep deprivation and zolpidem use. The article also mentions the potential for muscle necrosis, rhabdomyolysis, renal failure, and hyperkalemia as consequences of crush syndrome. The patient experienced severe pain in the right side of her body. These are the adverse reactions that are directly expressed in the snippet.",
+                    "output": "Compartment syndrome, Crush syndrome, Muscle necrosis, Rhabdomyolysis, Renal failure, Hyperkalaemia, Pain"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "model": "Qwen/Qwen2-72B-Instruct",
+            "url": "https://api.together.xyz/v1",
+            "temperature": 0.0,
+            "max_tokens": 512,
+            "top_p": 1,
+            "n": 1,
+            "stop": [],
+            "frequency_penalty": 0,
+            "presence_penalty": 0
+        }
+    },
+    "config": {
+        "infer_signature_name": "infer_biodex",
+        "rank_signature_name": "rank_biodex",
+        "prior_A": 1000,
+        "prior_path": "./data/biodex/biodex_priors.json",
+        "rank_topk": 50,
+        "chunk_context_window": 3000,
+        "chunk_max_windows": 5,
+        "chunk_window_overlap": 0.02,
+        "rank_skip": false,
+        "ontology_path": "./data/biodex/reaction_terms.txt",
+        "ontology_name": "biodex",
+        "retriever_model_name": "FremyCompany/BioLORD-STAMB2-v1",
+        "optimizer_name": "left-to-right"
+    }
+}

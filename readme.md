@@ -1,3 +1,59 @@
+**Cloned from [xmc.dspy](https://github.com/KarelDO/xmc.dspy) as part of the final project of  Advanved Topics In Natura Lanuage Processing 2024,BGU**
+
+### Project Information
+
+We reproduced some of [xmc.dspy](https://github.com/KarelDO/xmc.dspy) results with [together ai](https://www.together.ai/) serverless inference (thanks for the free credit!).
+
+Additionaly, we tested serval more things,
+
+Mainly:
+
+-   Are compiled prompts robust? - does a compiled prompt on model x transfer well to a model y?
+- How does the latest (2024 June) SOTA models compare aginst closed model (gpt-4) at the xmc task?
+- What improvment do we get by re-compiling the prompts on a new model?
+
+Tested models are Qwen2-72B-Intruct as replacement to gpt4, and Mistral-7B-Instruct-v0.3 as a replacement to LLaMA2-7B-chat. 
+
+(Note - we tried the newest LLaMa3 familiy, however they failed to follow the instruction properly which led to bad performance)
+
+#### Modifications compared to [xmc.dspy](https://github.com/KarelDO/xmc.dspy) :
+
+- Chaged the lm_config.json to point to together.ai infernce client and the wanted models. (The role of each model is defined with cli argument on "compile_irera" script).
+Also chaged llm inference parameter (such as stop,temprature,..) - their configuration  of paramaters didnt worked.
+
+- dspy in default tries to use "HFClientTGI". (in dspy/dsp/modules/hf_client). For it to use TogetherAI, We changed it behavior to try use together ai client if there is a together_api_key, otherwise it fallback to the defualt behavior. (The latest dspy support TogetherAI out-of-the-box, however the original xmc depends on a fixed, experimental version of dspy). The modifed version attached to this repo under "dspy".
+
+- Added/fixed the cache in the HFClientTGI (under the _generate function) to reduce redundant calls to the LLM.
+
+
+Our raw results can be found under "results" directory.
+
+#### Results summary
+
+Benchmarked aginst 2 datasets over 2 metrics (RP@5, RP@10)
+
+- Precomiled-prompt on a different model can be better then the original model. On the BioDex dataset, using the compiled prompt from llama2 + gpt4 on mistralv3 + Qwen2 yield better results (+1.4 , +2.4 - compared to the paper results.). Recomliling the prompt boosts the score even further (+3.5,+3.25).
+
+- On the other dataset (Tech) the new models falls behind the gpt-4 + llama2 baseline (-6.6,-9.5) , (-4.1,-4.3). Re-compling prompts improves, but not enough to pass the paper results.
+
+
+#### Conclusion
+
+- Prompts are somewhat transferable and can be used as a good baseline from the get-go.
+
+
+- Open-source models can give competitive results but still lags behind in some cases (compared to GPT4). It still worthy to check open-source alternative as in some cases they are better (Like in BioDex, Qwen2 + Mistral performed better than GPT4 + llama2) and they provide additional benefits (such as privacy).
+
+- Recompiling prompts with DSPy improves the results in all cases.
+
+
+
+**Link to the full presentation:**
+
+
+
+[Presentation](https://docs.google.com/presentation/d/1sh1JtTFCmX8opIXgn23AQU15pc6yL8Uf/edit?usp=drive_link&ouid=101261875244904167453&rtpof=true&sd=true)
+
 <p align="center">
   <img align="center" src="docs/irera_logic.png" width="680px" />
 </p>
