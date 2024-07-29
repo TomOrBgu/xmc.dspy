@@ -1,0 +1,15 @@
+.DS_Store
+.vscode/
+__pycache__/
+data/esco/
+data/embeddings/
+results/
+*.log
+local_cache/
+local_cache 2/
+local_cache.tar.gz
+**/local_cache/
+**/local_cache 2/
+**/local_cache.tar.gz
+**/*cache*/
+**/*data*

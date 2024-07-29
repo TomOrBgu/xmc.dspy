@@ -1,0 +1,45 @@
+/experiments/
+/checkpoints/
+# /data/
+/logs/
+/mlruns/
+/profiler/
+/logs/
+/docs/downloads/
+/docs/experiments/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+# notebooks/
+
+# mac
+.DS_Store
+
+# Other
+.vscode
+*.tsv
+*.pt
+gpt*.txt
+*.env
+local/
+local_*
+build/
+*.egg-info/
+# *.jsonl
+# *.json
+!/data/*.json
+/dist/
+# **/*.pkl
+checklist.md
+finetuning_ckpts/
+# cache/
+* copy*
+.idea
+assertion.log
+*.log
+*.db

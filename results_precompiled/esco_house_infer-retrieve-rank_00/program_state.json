@@ -1,0 +1,124 @@
+{
+    "infer_retrieve.infer.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "You will be responsible for the general management and development of the employees for budget and resource allocation and for ensuring timely and efficient project execution with high quality results .",
+                    "rationale": "produce the output. We ...",
+                    "output": "project management, resource allocation, employee management"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "model": "meta-llama/Llama-2-13b-chat-hf",
+            "url": "http://future-hgx-1",
+            "temperature": 0.01,
+            "max_tokens": 150,
+            "top_p": 0.97,
+            "n": 1,
+            "stop": [
+                "\n\n"
+            ]
+        }
+    },
+    "rank.cot": {
+        "traces": [],
+        "train": [],
+        "demos": [
+            {
+                "_store": {
+                    "augmented": true,
+                    "text": "You will be responsible for the general management and development of the employees for budget and resource allocation and for ensuring timely and efficient project execution with high quality results .",
+                    "options": [
+                        "project management",
+                        "perform project management",
+                        "personnel management",
+                        "project management principles",
+                        "manage personnel",
+                        "manage staff",
+                        "plan resource allocation",
+                        "ICT project management",
+                        "manage engineering project",
+                        "project management methodology (PM\u00b2)",
+                        "human resource management",
+                        "advise on personnel management",
+                        "manage several projects",
+                        "manage project information",
+                        "manage research and development projects",
+                        "ICT project management methodologies",
+                        "Agile project management",
+                        "manage ICT project",
+                        "Lean project management",
+                        "manage human resources",
+                        "manage healthcare staff",
+                        "train employees",
+                        "perform resource planning",
+                        "develop staff",
+                        "evaluate employees",
+                        "manage allocation of flight resources",
+                        "carry out project activities",
+                        "Prince2 project management",
+                        "protect employee rights",
+                        "manage artistic project",
+                        "capacity building",
+                        "supervise staff",
+                        "organise project meetings",
+                        "manage bridge construction projects",
+                        "recruit employees",
+                        "manage content development projects",
+                        "develop employee retention programs",
+                        "mitigate waste of resources",
+                        "manage project changes",
+                        "plan allocation of space",
+                        "manage resources",
+                        "motivate employees",
+                        "oversee construction project",
+                        "project configuration management",
+                        "knowledge management",
+                        "manage physical resources",
+                        "assess project resource needs",
+                        "plan the work of teams and individuals",
+                        "manage employee complaints",
+                        "develop management plans"
+                    ],
+                    "rationale": "identify the skills that are directly expressed in the job vacancy snippet. The vacancy mentions \"general management and development of the employees,\" which implies skills related to managing and developing staff. It also mentions \"budget and resource allocation,\" which suggests skills in planning and allocating resources. Furthermore, the vacancy requires \"ensuring timely and efficient project execution with high quality results,\" indicating project management skills.",
+                    "output": "personnel management, manage personnel, manage staff, plan resource allocation, human resource management, manage several projects, manage project information, manage human resources, develop staff, manage resources"
+                },
+                "_demos": [],
+                "_input_keys": null
+            }
+        ],
+        "lm": {
+            "temperature": 0.0,
+            "max_tokens": 150,
+            "top_p": 1,
+            "frequency_penalty": 0,
+            "presence_penalty": 0,
+            "n": 1,
+            "stop": [
+                "\n\n"
+            ],
+            "model": "gpt-4-1106-preview"
+        }
+    },
+    "config": {
+        "infer_signature_name": "infer_esco",
+        "rank_signature_name": "rank_esco",
+        "prior_A": 0,
+        "prior_path": "./data/esco/esco_priors.json",
+        "rank_topk": 50,
+        "chunk_context_window": 3000,
+        "chunk_max_windows": 5,
+        "chunk_window_overlap": 0.02,
+        "rank_skip": false,
+        "ontology_path": "./data/esco/skills_en_label.txt",
+        "ontology_name": "esco",
+        "retriever_model_name": "sentence-transformers/all-mpnet-base-v2",
+        "optimizer_name": "left-to-right"
+    }
+}

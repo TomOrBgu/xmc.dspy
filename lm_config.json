@@ -1,0 +1,40 @@
+{
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+        "url": "https://api.together.xyz/v1",
+        "model": "mistralai/Mistral-7B-Instruct-v0.3",
+        "temperature": 0.01,
+        "max_tokens": 512,
+        "top_p": 0.97,
+        "n": 1,
+        "stop": [
+
+        ]
+    },
+
+    "Qwen/Qwen2-72B-Instruct": {
+        "model": "Qwen/Qwen2-72B-Instruct",
+        "url": "https://api.together.xyz/v1",
+        "temperature": 0.0,
+        "max_tokens": 512,
+        "top_p": 1,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "n": 1,
+        "stop": [
+
+        ]
+    },
+    "Qwen/Qwen2-72B-Instruct-penalty": {
+        "model": "Qwen/Qwen2-72B-Instruct",
+        "url": "https://api.together.xyz/v1",
+        "temperature": 0.0,
+        "max_tokens": 512,
+        "top_p": 1,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0,
+        "n": 1,
+        "stop": [
+
+        ]
+    }
+}
